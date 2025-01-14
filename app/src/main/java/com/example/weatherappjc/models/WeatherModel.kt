@@ -1,4 +1,4 @@
-package com.example.weatherappjc
+package com.example.weatherappjc.models
 
 data class WeatherResponse(
     val location: Location,
@@ -18,3 +18,11 @@ data class Current(
 data class Condition(
     val text: String
 )
+
+data class WeatherItem(
+    val cityName: String,
+    val temperature: String,
+    val windSpeed: String,
+    val condition: String
+)
+

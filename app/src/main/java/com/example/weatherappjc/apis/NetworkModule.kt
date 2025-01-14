@@ -1,5 +1,6 @@
-package com.example.weatherappjc
+package com.example.weatherappjc.apis
 
+import com.example.weatherappjc.utils.AppConstants
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -12,7 +13,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 object NetworkModule {
     @Provides
     fun provideRetrofit(): Retrofit = Retrofit.Builder()
-        .baseUrl("https://api.weatherapi.com/v1/")
+        .baseUrl(AppConstants.BASE_URL)
         .addConverterFactory(GsonConverterFactory.create())
         .build()
 

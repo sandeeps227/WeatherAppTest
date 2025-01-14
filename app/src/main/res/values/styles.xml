@@ -7,5 +7,7 @@
         <item name="colorAccent">@color/teal_200</item>
         <item name="android:windowTranslucentStatus">true</item>
         <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="android:windowNoTitle">true</item>  <!-- Disable default ActionBar -->
+        <item name="android:windowActionBar">false</item> <!-- Disable ActionBar -->
     </style>
 </resources>

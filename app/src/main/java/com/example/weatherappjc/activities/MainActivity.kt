@@ -30,7 +30,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.weather_layout)
 
         val toolbar: Toolbar = findViewById(R.id.toolbar)
-        toolbar.setPadding(0, getStatusBarHeight(), 0, 0)
         setSupportActionBar(toolbar) // Set the toolbar as the ActionBar
         progressBar = findViewById(R.id.progressBar)
         recyclerView = findViewById(R.id.recyclerView)
@@ -47,7 +46,7 @@ class MainActivity : AppCompatActivity() {
 
         // Call the fetchWeatherData again after 5 seconds
         CoroutineScope(Dispatchers.Main).launch {
-            delay(9000)  // 5 seconds delay
+            delay(9000)  // 9 seconds delay
             viewModel.fetchWeatherData(listOf("Visakhapatnam", "Sydney", "Tokyo", "London", "New York"))
         }
 
